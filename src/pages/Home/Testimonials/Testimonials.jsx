@@ -8,7 +8,7 @@ const Testimonials = () => {
                     <div id="item1" className="carousel-item w-full">
                         <div className="flex flex-col lg:flex-row">
                             <div className="flex-1">
-                                <img src="https:i.ibb.co/2YDzJkn/woman-looking-orange-tablet-1157-2103.jpg" alt="" />
+                                <img src="https:i.ibb.co/2YDzJkn/woman-looking-orange-tablet-1157-2103.jpg" alt="" className="rounded-xl" />
                             </div>
                             <div className="flex-1 p-12 items-center flex">
                                 <div>
@@ -21,7 +21,7 @@ const Testimonials = () => {
                     <div id="item2" className="carousel-item w-full">
                         <div className="flex flex-col lg:flex-row">
                             <div className="flex-1">
-                                <img src="https://i.ibb.co/5vQs0JV/happy-woman-her-husband-standing-reception-desk-while-checking-hotel-637285-7448.jpg" alt="" />
+                                <img src="https://i.ibb.co/5vQs0JV/happy-woman-her-husband-standing-reception-desk-while-checking-hotel-637285-7448.jpg" alt="" className="rounded-xl" />
                             </div>
                             <div className="flex-1 p-12 items-center flex">
                                 <div>
@@ -34,7 +34,7 @@ const Testimonials = () => {
                     <div id="item3" className="carousel-item w-full">
                         <div className="flex flex-col lg:flex-row">
                             <div className="flex-1">
-                                <img src="https://i.ibb.co/gzdyv4V/medium-shot-man-holding-smartphone-23-2149963943.jpg" alt="" />
+                                <img src="https://i.ibb.co/gzdyv4V/medium-shot-man-holding-smartphone-23-2149963943.jpg" alt="" className="rounded-xl" />
                             </div>
                             <div className="flex-1 p-12 items-center flex">
                                 <div>
@@ -47,7 +47,7 @@ const Testimonials = () => {
                     <div id="item4" className="carousel-item w-full">
                         <div className="flex flex-col lg:flex-row">
                             <div className="flex-1">
-                                <img src="https://i.ibb.co/0QrgKgV/happy-couple-making-order-cafe-while-waiter-is-showing-them-menu-digital-table-637285-529.jpg" alt="" />
+                                <img src="https://i.ibb.co/0QrgKgV/happy-couple-making-order-cafe-while-waiter-is-showing-them-menu-digital-table-637285-529.jpg" alt="" className="rounded-xl" />
                             </div>
                             <div className="flex-1 p-12 items-center flex">
                                 <div>

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import GoogleMapReact from 'google-map-react';
-import { googleApiKey } from '../../GoogleAPIKey/googleApiKey';
+import { googleApiKey } from '../../../GoogleAPIKey/googleApiKey';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
