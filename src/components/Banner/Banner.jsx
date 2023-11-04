@@ -88,6 +88,27 @@ const Banner = () => {
 
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide3" className="btn btn-circle">❮</a>
+                        <a href="#slide5" className="btn btn-circle">❯</a>
+                    </div>
+                </div>
+
+                {/* 5th slider */}
+                <div id="slide5" className="carousel-item relative w-full lg:min-h-[calc(100vh-30vh)]">
+                    <div className="hero"
+                        style={{ borderRadius: '12px' }}>
+                        <iframe
+                            title="YouTube Video"
+                            className="w-full h-full object-cover"
+                            src="https://www.youtube.com/embed/eEY50BOF0wM?autoplay=1&mute=1&loop=1&controls=0&playlist=eEY50BOF0wM"
+                            frameBorder="0"
+                            allow="autoplay"
+                            allowfullscreen
+                        ></iframe>
+                        <div className="hero-overlay bg-opacity-10 rounded-xl"></div>
+                    </div>
+
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" className="btn btn-circle">❮</a>
                         <a href="#slide1" className="btn btn-circle">❯</a>
                     </div>
                 </div>
