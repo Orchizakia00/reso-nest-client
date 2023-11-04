@@ -3,7 +3,7 @@ const Community = () => {
     return (
         <div className="mb-16 mt-8">
             <h1 className="text-center text-4xl font-bold mb-10">Our Community</h1>
-            <div className="flex flex-col lg:flow-row bg-base-200 rounded-xl p-10">
+            <div className="flex flex-col lg:flex-row bg-base-200 rounded-xl p-10">
                 <div className="flex-1 text-left flex items-center">
                     <div>
                         <h1 className="text-2xl font-bold mb-6">Before you go, Subscribe to Our Newsletter!</h1>
