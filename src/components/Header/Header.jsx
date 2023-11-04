@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import { FaBuilding } from "react-icons/fa6";
 
 const Header = () => {
 
@@ -27,7 +28,9 @@ const Header = () => {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div>
-                <Link to="/"><a className="btn btn-ghost normal-case text-xl">ResoNest</a></Link>
+                <Link to="/"><a className="btn btn-ghost normal-case text-xl">
+                    <FaBuilding></FaBuilding>
+                    ResoNest</a></Link>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
