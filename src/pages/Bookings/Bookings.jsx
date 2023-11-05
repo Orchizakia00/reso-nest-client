@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const Bookings = () => {
 
@@ -121,9 +122,10 @@ const Bookings = () => {
                                     <td>{booking.date}</td>
                                     <td>{booking.duration}</td>
                                     <td>
-                                        <button onClick={() => handleDelete(booking._id)} className="btn btn-circle btn-outline">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                        </button>
+                                        <Link to={`/updateBooking/${booking._id}`}>
+                                            <button className="btn btn-circle btn-outline normal-case mr-2 ">Edit</button>
+                                        </Link>
+                                        <button onClick={() => handleDelete(booking._id)} className="btn btn-circle btn-outline normal-case">Delete</button>
                                     </td>
                                 </tr>
                             ))
