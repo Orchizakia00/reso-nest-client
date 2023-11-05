@@ -1,9 +1,21 @@
 import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import { useEffect, useState } from "react";
 
 const Bookings = () => {
 
-    const bookings = useLoaderData();
+    const { user } = useAuth();
+    const [bookings, setBookings] = useState([]);
+
+
+    const url = `http://localhost:5000/bookings?email=${user.email}`;
+
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setBookings(data))
+    }, [url])
 
     return (
         <div>

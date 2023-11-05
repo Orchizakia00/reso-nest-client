@@ -9,6 +9,8 @@ import PrivateRoute from "./PrivateRoute";
 import RoomDetails from "../pages/RoomDetails/RoomDetails";
 import CheckOut from "../pages/CheckOut/CheckOut";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import useAuth from "../hooks/useAuth";
+
 
 const router = createBrowserRouter([
   {
@@ -39,7 +41,6 @@ const router = createBrowserRouter([
       {
         path: "/bookings",
         element: <PrivateRoute><Bookings></Bookings></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/bookings')
       },
       {
         path: "/login",
