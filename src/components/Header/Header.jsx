@@ -1,14 +1,37 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaBuilding } from "react-icons/fa6";
+import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
 
 const Header = () => {
+
+    
+    const { user, logOut } = useAuth();
+    console.log(user);
+
+    const handleLogout = () => {
+        logOut()
+            .then(res => {
+                console.log(res)
+                toast.success('Logged Out Successfully!')
+            })
+            .catch(err => console.log(err))
+    }
 
     const navLinks =
         <>
             <NavLink to={'/'}><li><a>Home</a></li></NavLink>
             <NavLink to={'/rooms'}><li><a>Rooms</a></li></NavLink>
             <NavLink to={'/bookings'}><li><a>My Bookings</a></li></NavLink>
-            <NavLink to={'/login'}><li><a>Login</a></li></NavLink>
+            {
+                user? (
+                    <>
+                        <button onClick={handleLogout}><li><a>Logout</a></li></button>
+                    </>
+                ) : (
+                    <NavLink to={'/login'}><li><a>Login</a></li></NavLink>
+                )
+            }
         </>
 
     return (<>
