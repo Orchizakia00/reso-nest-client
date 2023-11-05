@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import { useLoaderData } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const Bookings = () => {
 
@@ -16,6 +16,57 @@ const Bookings = () => {
             .then(res => res.json())
             .then(data => setBookings(data))
     }, [url])
+
+    const handleDelete = (id) => {
+        toast.custom((t) => (
+            <div
+                className={`${t.visible ? 'animate-enter' : 'animate-leave'
+                    } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+            >
+                <div className="flex-1 w-0 p-4">
+                    <div className="flex items-start">
+                        <div className="ml-3 flex-1">
+                            <p className="mt-1 text-sm text-gray-500">
+                                Are you sure you want to delete?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="flex border-l border-gray-200">
+                    <button
+                        onClick={() => {
+                            toast.dismiss(t.id);
+                            // Handle deletion logic here
+                            fetch(`http://localhost:5000/bookings/${id}`, {
+                                method: 'DELETE',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                }
+                            })
+                                .then(res => res.json())
+                                .then(data => {
+                                    console.log(data);
+                                    if (data.deletedCount > 0) {
+                                        toast.success('Your booking has been deleted successfully');
+                                        const remaining = bookings.filter(booking => booking._id !== id);
+                                        setBookings(remaining);
+                                    }
+                                })
+                        }}
+                        className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+                        Yes
+                    </button>
+                    <button
+                        onClick={() => toast.dismiss(t.id)}
+                        className="w-full border border-transparent rounded-none p-4 flex items-center justify-center text-sm font-medium text-gray-600 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                    >
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        ));
+    }
 
     return (
         <div>
@@ -36,6 +87,7 @@ const Bookings = () => {
                     {/* head */}
                     <thead>
                         <tr>
+                            <th>Room Image</th>
                             <th>Room Name</th>
                             <th>Customer Details</th>
                             <th>Date</th>
@@ -47,6 +99,15 @@ const Bookings = () => {
                         {
                             bookings.map(booking => (
                                 <tr key={booking._id}>
+                                    <td>
+                                        <div className="avatar">
+                                            <div className="mask w-[100px] h-[100px]">
+                                                {
+                                                    booking.roomImg && <img src={booking?.roomImg} alt={booking.roomTitle} />
+                                                }
+                                            </div>
+                                        </div>
+                                    </td>
                                     <td>{booking.roomTitle}</td>
                                     <td>
                                         <div className="flex items-center space-x-3">
@@ -60,7 +121,7 @@ const Bookings = () => {
                                     <td>{booking.date}</td>
                                     <td>{booking.duration}</td>
                                     <td>
-                                        <button className="btn btn-circle btn-outline">
+                                        <button onClick={() => handleDelete(booking._id)} className="btn btn-circle btn-outline">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                                         </button>
                                     </td>

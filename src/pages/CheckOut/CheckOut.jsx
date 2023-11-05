@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 const CheckOut = () => {
 
     const room = useLoaderData();
-    const { title, availability, price } = room;
+    const { title, availability, price, img } = room;
 
     const { user } = useAuth();
 
@@ -30,6 +30,7 @@ const CheckOut = () => {
         const order = {
             customerName: name,
             roomTitle: title,
+            roomImg: img,
             email,
             date,
             duration,
