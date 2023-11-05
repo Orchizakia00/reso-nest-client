@@ -66,10 +66,14 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control my-3">
-                            <button className="btn btn-accent mb-5 normal-case">Login</button>
-                            <button onClick={handleGoogleSignIn} className="btn btn-ghost normal-case"><FcGoogle></FcGoogle> Login With Google</button>
+                            <button className="btn btn-accent normal-case">Login</button>
+
                         </div>
                     </form>
+                    <div className="flex justify-center">
+                        <button onClick={handleGoogleSignIn} className="btn btn-ghost normal-case"><FcGoogle></FcGoogle> Login With Google</button>
+                    </div>
+
                 </div>
             </div>
 

@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 const Register = () => {
 
-    const { createUser, user } = useAuth();
+    const { createUser } = useAuth();
     const navigate = useNavigate();
 
     const handleRegister = event => {

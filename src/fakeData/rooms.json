@@ -1,0 +1,445 @@
+[
+    {
+        "room_no": "101",
+        "img": "https://i.ibb.co/qBVmcFM/room-interior-hotel-bedroom-23-2150683421.jpg",
+        "title": "Deluxe Room with Ocean View",
+        "price": 150,
+        "description": "Enjoy breathtaking ocean views from this spacious and luxurious deluxe room.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Mini Bar"
+        ],
+        "room_size": "400 sq ft",
+        "availability": true,
+        "special_offer": "Stay 3 nights, get 1 night free"
+    },
+    {
+        "room_no": "102",
+        "img": "https://i.ibb.co/rmdKNnv/modern-luxurious-bedroom-elegant-comfortable-design-generated-by-ai-188544-29281.jpg",
+        "title": "Executive Suite",
+        "price": 250,
+        "description": "Experience unparalleled luxury and comfort in our executive suite with a separate living area.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Jacuzzi"
+        ],
+        "room_size": "600 sq ft",
+        "availability": false,
+        "special_offer": null
+    },
+    {
+        "room_no": "103",
+        "img": "https://i.ibb.co/NjxR9bg/luxury-hotel-suite-with-modern-elegance-comfort-generated-by-ai-188544-32644.jpg",
+        "title": "Standard Room",
+        "price": 100,
+        "description": "A cozy and comfortable room perfect for solo travelers or couples.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning"
+        ],
+        "room_size": "300 sq ft",
+        "availability": true,
+        "special_offer": null
+    },
+    {
+        "room_no": "104",
+        "img": "https://i.ibb.co/ryN39Tw/bedroom-with-bed-sofa-corner-664601-4971.jpg",
+        "title": "Family Suite",
+        "price": 300,
+        "description": "Spacious suite with multiple bedrooms, ideal for families or large groups.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Kitchenette"
+        ],
+        "room_size": "800 sq ft",
+        "availability": true,
+        "special_offer": "10% off for early bookings"
+    },
+    {
+        "room_no": "105",
+        "img": "https://i.ibb.co/crsHdXs/room-interior-hotel-bedroom-23-2150683481.jpg",
+        "title": "Luxury Penthouse",
+        "price": 500,
+        "description": "Exclusive penthouse with panoramic city views, private terrace, and deluxe amenities.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Private Jacuzzi"
+        ],
+        "room_size": "1000 sq ft",
+        "availability": true,
+        "special_offer": null
+    },
+    {
+        "room_no": "106",
+        "img": "https://i.ibb.co/ZhCMxhF/bedroom-with-large-bed-large-window-that-has-green-plant-it-1340-32481.jpg",
+        "title": "Economy Room",
+        "price": 80,
+        "description": "A budget-friendly option for travelers looking for a comfortable stay.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning"
+        ],
+        "room_size": "250 sq ft",
+        "availability": true,
+        "special_offer": null
+    },
+    {
+        "room_no": "107",
+        "img": "https://i.ibb.co/4Nd4b5V/hotels-bedroom-bed-decoration-romantic-honeymoon-night-inspiration-ideas-1044173-9876.jpg",
+        "title": "Honeymoon Suite",
+        "price": 400,
+        "description": "Romantic suite with a cozy atmosphere, perfect for honeymooners.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Champagne on arrival"
+        ],
+        "room_size": "500 sq ft",
+        "availability": false,
+        "special_offer": null
+    },
+    {
+        "room_no": "108",
+        "img": "https://i.ibb.co/dGYbvdQ/red-white-bed-with-red-chair-red-sofa-865967-366791.jpg",
+        "title": "Presidential Suite",
+        "price": 800,
+        "description": "Opulent suite with grand living spaces, private dining area, and dedicated butler service.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Private Pool"
+        ],
+        "room_size": "1200 sq ft",
+        "availability": true,
+        "special_offer": "Complimentary spa treatments for guests"
+    },
+    {
+        "room_no": "109",
+        "img": "https://i.ibb.co/kJxBQGr/interior-furnished-studio-apartment-419341-123153.jpg",
+        "title": "Studio Apartment",
+        "price": 200,
+        "description": "Modern and stylish studio apartment with a fully equipped kitchenette.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Kitchenette"
+        ],
+        "room_size": "350 sq ft",
+        "availability": true,
+        "special_offer": "15% off for extended stays"
+    },
+    {
+        "room_no": "110",
+        "img": "https://i.ibb.co/9NqTrhT/bedroom-with-green-wall-bed-with-pillow-it-1340-38414.jpg",
+        "title": "Garden View Room",
+        "price": 120,
+        "description": "Relax in a comfortable room with views of the hotel's lush gardens.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning"
+        ],
+        "room_size": "280 sq ft",
+        "availability": true,
+        "special_offer": null
+    },
+    {
+        "room_no": "111",
+        "img": "https://i.ibb.co/WktwqYK/modifiable-patient-accommodations-889056-3719.jpg",
+        "title": "Family Room",
+        "price": 180,
+        "description": "Spacious room with multiple beds, suitable for families with children.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning"
+        ],
+        "room_size": "400 sq ft",
+        "availability": false,
+        "special_offer": null
+    },
+    {
+        "room_no": "112",
+        "img": "https://i.ibb.co/QHf5NHw/indoor-design-luxury-resort-23-2150497270.jpg",
+        "title": "Mountain View Suite",
+        "price": 300,
+        "description": "Suite with stunning views of the nearby mountains, perfect for nature lovers.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Balcony"
+        ],
+        "room_size": "550 sq ft",
+        "availability": true,
+        "special_offer": null
+    },
+    {
+        "room_no": "113",
+        "img": "https://i.ibb.co/2vFycR5/view-adorable-looking-kitten-23-2150886334.jpg",
+        "title": "Pet-Friendly Room",
+        "price": 110,
+        "description": "A pet-friendly room equipped with pet amenities for guests traveling with their furry companions.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Pet Bed"
+        ],
+        "room_size": "300 sq ft",
+        "availability": true,
+        "special_offer": "No pet fees for a limited time"
+    },
+    {
+        "room_no": "114",
+        "img": "https://i.ibb.co/MgxgtzL/luxury-modern-bedroom-with-comfortable-bedding-lighting-generated-by-ai-188544-18280.jpg",
+        "title": "Business Suite",
+        "price": 250,
+        "description": "Suite tailored for business travelers, featuring a spacious work area and complimentary business services.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Work Desk"
+        ],
+        "room_size": "500 sq ft",
+        "availability": true,
+        "special_offer": "Free airport shuttle service"
+    },
+    {
+        "room_no": "115",
+        "img": "https://i.ibb.co/TPJMnCp/design-house-modern-villa-with-open-plan-living-private-bedroom-wing-large-terrace-with-privacy-1258.jpg",
+        "title": "Beachfront Bungalow",
+        "price": 400,
+        "description": "Private bungalow located right on the beach, offering unparalleled ocean views and direct beach access.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Private Beach Area"
+        ],
+        "room_size": "700 sq ft",
+        "availability": true,
+        "special_offer": "Complimentary water sports activities"
+    },
+    {
+        "room_no": "116",
+        "img": "https://i.ibb.co/09PF42Y/beautiful-castle-architecture-23-2150754883.jpg",
+        "title": "Vintage Suite",
+        "price": 180,
+        "description": "Suite with a charming vintage decor, combining classic elegance with modern comforts.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning"
+        ],
+        "room_size": "450 sq ft",
+        "availability": true,
+        "special_offer": null
+    },
+    {
+        "room_no": "117",
+        "img": "https://i.ibb.co/jZSw7Y8/modern-elegance-sleek-clean-loft-apartment-generated-by-ai-188544-29167.jpg",
+        "title": "Accessible Room",
+        "price": 120,
+        "description": "Wheelchair-accessible room designed for guests with mobility challenges.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Accessible Bathroom"
+        ],
+        "room_size": "320 sq ft",
+        "availability": true,
+        "special_offer": null
+    },
+    {
+        "room_no": "118",
+        "img": "https://i.ibb.co/b7w09bJ/indoor-design-luxury-resort-23-2150497255.jpg",
+        "title": "Ski Chalet",
+        "price": 350,
+        "description": "Cozy chalet located near the ski slopes, perfect for winter sports enthusiasts.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Fireplace"
+        ],
+        "room_size": "600 sq ft",
+        "availability": true,
+        "special_offer": "Ski equipment rental included"
+    },
+    {
+        "room_no": "119",
+        "img": "https://i.ibb.co/PTD3f4w/modern-styled-entryway-23-2150695915.jpg",
+        "title": "Art Deco Room",
+        "price": 160,
+        "description": "Room adorned with elegant Art Deco furnishings, offering a unique and stylish ambiance.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning"
+        ],
+        "room_size": "350 sq ft",
+        "availability": false,
+        "special_offer": null
+    },
+    {
+        "room_no": "120",
+        "img": "https://i.ibb.co/GRnfWQJ/luxury-hotel-bedroom-candlelight-glowing-elegance-generated-by-ai-188544-16466.jpg",
+        "title": "Romantic Suite",
+        "price": 280,
+        "description": "Intimate suite designed for couples, featuring a romantic atmosphere and luxurious amenities.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Private Jacuzzi"
+        ],
+        "room_size": "400 sq ft",
+        "availability": true,
+        "special_offer": "Complimentary champagne and chocolates"
+    },
+    {
+        "room_no": "121",
+        "img": "https://i.ibb.co/LdMzm0t/luxury-living-room-with-city-skyline-view-generative-ai-188544-46252.jpg",
+        "title": "Rooftop Penthouse",
+        "price": 600,
+        "description": "Exclusive penthouse with a private rooftop terrace, offering panoramic city views.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Private Rooftop Terrace"
+        ],
+        "room_size": "1100 sq ft",
+        "availability": true,
+        "special_offer": "Free spa treatments for the duration of stay"
+    },
+    {
+        "room_no": "122",
+        "img": "https://i.ibb.co/qBVmcFM/room-interior-hotel-bedroom-23-2150683421.jpg",
+        "title": "Classic Double Room",
+        "price": 90,
+        "description": "Comfortable double room with classic decor, suitable for solo travelers or couples.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning"
+        ],
+        "room_size": "280 sq ft",
+        "availability": true,
+        "special_offer": "15% off for returning guests"
+    },
+    {
+        "room_no": "123",
+        "img": "https://i.ibb.co/r6pb5mc/indoor-design-luxury-resort-23-2150497284.jpg",
+        "title": "Tropical Bungalow",
+        "price": 380,
+        "description": "Bungalow surrounded by lush tropical gardens, providing a serene and relaxing retreat.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Private Garden"
+        ],
+        "room_size": "650 sq ft",
+        "availability": false,
+        "special_offer": null
+    },
+    {
+        "room_no": "124",
+        "img": "https://i.ibb.co/xHWg6dT/idyllic-getaways-dreamy-destinations-your-vacation-767466-12199.jpg",
+        "title": "Safari Tent",
+        "price": 200,
+        "description": "Experience the thrill of camping in a luxurious safari tent with modern amenities.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Outdoor Seating Area"
+        ],
+        "room_size": "350 sq ft",
+        "availability": true,
+        "special_offer": "Guided safari tour included"
+    },
+    {
+        "room_no": "125",
+        "img": "https://i.ibb.co/ygKZB0z/bedroom-decor-home-interior-design-industrial-rustic-style-with-brick-wall-decorated-with-metal-wood.jpg",
+        "title": "Urban Loft",
+        "price": 180,
+        "description": "Chic loft-style accommodation in the heart of the city, featuring contemporary design and city views.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Open Kitchen"
+        ],
+        "room_size": "400 sq ft",
+        "availability": true,
+        "special_offer": null
+    },
+    {
+        "room_no": "126",
+        "img": "https://i.ibb.co/J7QN1QH/bed-bedroom-decorated-with-brazilian-folklore-design-23-2150794075.jpg",
+        "title": "Mediterranean Villa",
+        "price": 450,
+        "description": "Luxurious villa with Mediterranean-inspired architecture, private pool, and stunning sea views.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Private Pool"
+        ],
+        "room_size": "800 sq ft",
+        "availability": true,
+        "special_offer": "Complimentary gourmet dinner for two"
+    },
+    {
+        "room_no": "127",
+        "img": "https://i.ibb.co/DG6KZqb/bedroom-with-green-wall-bed-with-white-blanket-it-1340-38404.jpg",
+        "title": "Modern Apartment",
+        "price": 280,
+        "description": "Sleek and modern apartment with state-of-the-art amenities and stylish furnishings.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Full Kitchen"
+        ],
+        "room_size": "600 sq ft",
+        "availability": false,
+        "special_offer": null
+    },
+    {
+        "room_no": "128",
+        "img": "https://i.ibb.co/XVGRvVg/window-views-collection-travel-through-your-window-916943-157.jpg",
+        "title": "Riverfront Cottage",
+        "price": 320,
+        "description": "Quaint cottage located by the river, offering a peaceful and picturesque setting.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Private Patio"
+        ],
+        "room_size": "500 sq ft",
+        "availability": true,
+        "special_offer": "Free boat tour on the river"
+    },
+    {
+        "room_no": "129",
+        "img": "https://i.ibb.co/qWG5JPh/deck-with-view-city-background-865967-346147.jpg",
+        "title": "Sunny Villa",
+        "price": 400,
+        "description": "Villa bathed in natural sunlight, featuring spacious living areas and a private garden.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Private Garden"
+        ],
+        "room_size": "700 sq ft",
+        "availability": true,
+        "special_offer": "Stay 5 nights, get 2 nights free"
+    },
+    {
+        "room_no": "130",
+        "img": "https://i.ibb.co/yVZfQNQ/indoor-design-luxury-resort-23-2150497260.jpg",
+        "title": "Ski Lodge",
+        "price": 300,
+        "description": "Cozy lodge nestled in the mountains, perfect for winter sports enthusiasts.",
+        "facilities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Fireplace"
+        ],
+        "room_size": "450 sq ft",
+        "availability": false,
+        "special_offer": null
+    }
+]
