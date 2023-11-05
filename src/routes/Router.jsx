@@ -8,11 +8,13 @@ import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import RoomDetails from "../pages/RoomDetails/RoomDetails";
 import CheckOut from "../pages/CheckOut/CheckOut";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout></RootLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -36,7 +38,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/bookings",
-        element: <PrivateRoute><Bookings></Bookings></PrivateRoute>
+        element: <PrivateRoute><Bookings></Bookings></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/bookings')
       },
       {
         path: "/login",

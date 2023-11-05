@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
 
 const CheckOut = () => {
 
@@ -44,9 +45,14 @@ const CheckOut = () => {
             },
             body: JSON.stringify(order)
         })
-        .then(res => res.json())
-        .then(data => console.log(data));
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                toast.success('Your Booking is Successful!');
+            });
+
     }
+
 
 
     return (
