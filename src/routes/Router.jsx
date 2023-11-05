@@ -7,6 +7,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import RoomDetails from "../pages/RoomDetails/RoomDetails";
+import CheckOut from "../pages/CheckOut/CheckOut";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
       {
         path: "/roomDetails/:id",
         element: <PrivateRoute><RoomDetails></RoomDetails></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
+      },
+      {
+        path: "/checkout/:id",
+        element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
       },
       {

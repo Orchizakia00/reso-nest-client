@@ -1,10 +1,10 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const RoomDetails = () => {
 
     const room = useLoaderData();
 
-    const { title, img, description, room_size, room_no, price, availability, special_offer, facilities } = room;
+    const { title, img, description, room_size, room_no, price, availability, special_offer, facilities, _id } = room;
 
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl my-10">
@@ -25,7 +25,7 @@ const RoomDetails = () => {
                     {special_offer !== null ? special_offer : "No special offer available"}
                 </p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-accent">Book Now</button>
+                    <Link to={`/checkout/${_id}`}><button className="btn btn-accent">Book Now</button></Link>
                 </div>
             </div>
         </div>
