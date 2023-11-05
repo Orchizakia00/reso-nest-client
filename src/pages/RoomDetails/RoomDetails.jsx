@@ -4,7 +4,7 @@ const RoomDetails = () => {
 
     const room = useLoaderData();
 
-    const { _id, title, img, description, room_size, room_no, price, availability, special_offer, facilities } = room;
+    const { title, img, description, room_size, room_no, price, availability, special_offer, facilities } = room;
 
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl my-10">

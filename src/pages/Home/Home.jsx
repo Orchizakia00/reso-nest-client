@@ -4,8 +4,12 @@ import Discount from "./Discount/Discount";
 import Testimonials from "./Testimonials/Testimonials";
 import Community from "./Community/Community";
 import Featured from "./Featured/Featured";
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
+
+    const rooms = useLoaderData();
+
     return (
         <div>
             <Helmet>
@@ -13,7 +17,7 @@ const Home = () => {
             </Helmet>
             <Banner></Banner>
             <Discount></Discount>
-            <Featured></Featured>
+            <Featured rooms= {rooms}></Featured>
             <Testimonials></Testimonials>
             <Community></Community>
         </div>
