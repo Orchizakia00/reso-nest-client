@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet-async";
-import useAuth from "../../hooks/useAuth";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import BookingRow from "./BookingRow";
 
 const Bookings = () => {
 
@@ -94,40 +94,18 @@ const Bookings = () => {
                             <th>Date</th>
                             <th>Duration</th>
                             <th>Action</th>
+                            <th>Feedback</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             bookings.map(booking => (
-                                <tr key={booking._id}>
-                                    <td>
-                                        <div className="avatar">
-                                            <div className="mask w-[100px] h-[100px]">
-                                                {
-                                                    booking.roomImg && <img src={booking?.roomImg} alt={booking.roomTitle} />
-                                                }
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>{booking.roomTitle}</td>
-                                    <td>
-                                        <div className="flex items-center space-x-3">
-                                            <div>
-                                                <div className="font-bold">{booking.customerName}</div>
-                                                <div className="text-sm opacity-50">Email: {booking.email}</div>
-                                                <div className="text-sm opacity-50">Phone: {booking.phone}</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>{booking.date}</td>
-                                    <td>{booking.duration}</td>
-                                    <td>
-                                        <Link to={`/updateBooking/${booking._id}`}>
-                                            <button className="btn btn-circle btn-outline normal-case mr-2 ">Edit</button>
-                                        </Link>
-                                        <button onClick={() => handleDelete(booking._id)} className="btn btn-circle btn-outline normal-case">Delete</button>
-                                    </td>
-                                </tr>
+                                <BookingRow
+                                    key={booking._id}
+                                    
+                                    booking={booking}
+                                    handleDelete={handleDelete}
+                                ></BookingRow>
                             ))
                         }
                     </tbody>
