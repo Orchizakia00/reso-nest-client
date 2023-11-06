@@ -8,7 +8,7 @@ const UpdateBooking = () => {
     const { title, price } = room;
 
     const handleUpdateBooking = () => {
-        
+
     }
 
     return (
