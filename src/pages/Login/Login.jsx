@@ -2,6 +2,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const Login = () => {
 
@@ -19,8 +20,19 @@ const Login = () => {
         login(email, password)
             .then(result => {
                 console.log(result.user);
-                navigate('/');
+
                 toast.success('Logged In Successfully!');
+                const user = { email };
+
+                // get token
+                axios.post('http://localhost:5000/jwt', user,
+                    { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data);
+                        if (res.data.success) {
+                            navigate('/');
+                        }
+                    })
             })
             .catch(error => {
                 console.log(error);
@@ -30,8 +42,17 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         signInWithGoogle()
             .then(result => {
-                console.log(result.user);
-                navigate('/');
+                const user = result.user;
+                console.log(user);
+
+                axios.post('http://localhost:5000/jwt', user,
+                    { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data);
+                        if (res.data.success) {
+                            navigate('/');
+                        }
+                    })
             })
             .catch(error => {
                 console.error(error);

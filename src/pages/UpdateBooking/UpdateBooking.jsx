@@ -13,7 +13,7 @@ const UpdateBooking = () => {
 
     return (
         <div>
-            <h1 className="text-center text-4xl font-bold mb-16">Book: {title} </h1>
+            <h1 className="text-center text-4xl font-bold mb-16">Update: {title} </h1>
             <form onSubmit={handleUpdateBooking} className="card-body">
                 <div className="flex gap-4">
                     <div className="form-control flex-1">
@@ -61,7 +61,7 @@ const UpdateBooking = () => {
                 </div>
 
                 <div className="form-control mt-6">
-                    <button className="btn btn-accent normal-case">Confirm Booking</button>
+                    <button className="btn btn-accent normal-case">Update Booking</button>
                 </div>
             </form>
         </div>

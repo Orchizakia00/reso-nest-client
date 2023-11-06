@@ -1,6 +1,6 @@
+import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import toast from "react-hot-toast";
 
 const CheckOut = () => {
 
