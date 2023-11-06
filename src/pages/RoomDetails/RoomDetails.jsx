@@ -16,9 +16,11 @@ const RoomDetails = () => {
             .then(data => {
                 console.log(data);
                 setReviews(data);
-
             })
     }, [_id])
+
+    const filteredReview = reviews.filter(review => review.roomId === _id);
+    console.log(filteredReview);
 
     return (
         <div>
@@ -39,27 +41,21 @@ const RoomDetails = () => {
                     <p> <span className="font-bold">Special Offer: </span>
                         {special_offer !== null ? special_offer : "No special offer available"}
                     </p>
+                    <p> <span className="font-bold">Reviews: </span> {filteredReview < 0 ? filteredReview.length : 'No Reviews'}</p>
                     <div className="card-actions justify-end">
                         <Link to={`/checkout/${_id}`}><button className="btn btn-accent">Book Now</button></Link>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <h1 className="text-center text-3xl font-bold mb-16">Reviews</h1>
-                {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {
-                        reviews.filter(review => review.roomId === _id)
-                            .map(review => <ReviewCard key={review._id} review={review}></ReviewCard>)
-                    }
-                </div> */}
-                {reviews.length === 0 ? (
-                    <p className="text-center text-3xl">No reviews available for this room.</p>
+            <div className=" mb-20">
+                <h1 className="text-center text-3xl font-bold mb-16 mt-32">Reviews</h1>
+                {filteredReview.length === 0 ? (
+                    <p className="text-center text-2xl">No reviews available for this room.</p>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {
-                            reviews.filter(review => review.roomId === _id)
-                                .map(review => <ReviewCard key={review._id} review={review}></ReviewCard>)
+                            filteredReview.map(review => <ReviewCard key={review._id} review={review}></ReviewCard>)
                         }
                     </div>
                 )}

@@ -2,16 +2,17 @@
 
 const ReviewCard = ({ review }) => {
 
-    const { comment, rating, customerName } = review;
+    const { comment, rating, customerName, timestamp } = review;
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl image-full">
+        <div className="card w-96 shadow-xl">
             <div className="card-body">
-                <h2 className="card-title">{customerName}</h2>
+
                 <p>{comment}</p>
-                <p>{rating}</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                <p> <span className="font-bold">Rating:</span> {rating} / 5</p>
+                <div className="flex flex-col text-right">
+                    <h2 className="text-right text-lg">--{customerName}</h2>
+                    <p className="">{timestamp}</p>
                 </div>
             </div>
         </div>
