@@ -50,7 +50,7 @@ const UpdateBooking = () => {
         <div>
             <h1 className="text-center text-4xl font-bold mb-16">Update: {roomTitle} </h1>
             <form onSubmit={handleUpdateBooking} className="card-body">
-                <div className="flex gap-4">
+                <div className="flex flex-col lg:flex-row gap-4">
                     <div className="form-control flex-1">
                         <label className="label">
                             <span className="label-text">Name</span>
@@ -65,7 +65,7 @@ const UpdateBooking = () => {
                     </div>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col lg:flex-row gap-4">
                     <div className="form-control flex-1">
                         <label className="label">
                             <span className="label-text">Date</span>
@@ -80,7 +80,7 @@ const UpdateBooking = () => {
                     </div>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col lg:flex-row gap-4">
                     <div className="form-control flex-1">
                         <label className="label">
                             <span className="label-text">Phone No</span>

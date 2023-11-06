@@ -5,7 +5,7 @@ import useAuth from "../../hooks/useAuth";
 const CheckOut = () => {
 
     const room = useLoaderData();
-    const { title, availability, price, img } = room;
+    const { title, availability, price, img, _id } = room;
 
     const { user } = useAuth();
 
@@ -31,6 +31,7 @@ const CheckOut = () => {
             customerName: name,
             roomTitle: title,
             roomImg: img,
+            roomId: _id,
             email,
             date,
             duration,
@@ -60,7 +61,7 @@ const CheckOut = () => {
         <div>
             <h1 className="text-center text-4xl font-bold mb-16">Book: {title} </h1>
             <form onSubmit={handleConfirmBooking} className="card-body">
-                <div className="flex gap-4">
+                <div className="flex flex-col lg:flex-row gap-4">
                     <div className="form-control flex-1">
                         <label className="label">
                             <span className="label-text">Name</span>
@@ -75,7 +76,7 @@ const CheckOut = () => {
                     </div>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col lg:flex-row gap-4">
                     <div className="form-control flex-1">
                         <label className="label">
                             <span className="label-text">Date</span>
@@ -90,7 +91,7 @@ const CheckOut = () => {
                     </div>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col lg:flex-row gap-4">
                     <div className="form-control flex-1">
                         <label className="label">
                             <span className="label-text">Phone No</span>

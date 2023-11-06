@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 
@@ -5,9 +6,9 @@ const Review = () => {
 
     const room = useLoaderData();
 
-    const { roomTitle, roomImg } = room;
+    const { roomTitle, roomImg, roomId } = room;
 
-    const handleReview = e => {
+    const handleReview = (e) => {
         e.preventDefault();
 
         const form = e.target;
@@ -15,23 +16,41 @@ const Review = () => {
         const rating = form.rating.value;
         const comment = form.comment.value;
 
-        const review = {
+        const timestamp = new Date().toISOString();
+
+        const newReview = {
+            roomId,
             customerName: name,
             rating,
             comment,
+            timestamp
         }
-        console.log(review);
+        console.log(newReview);
+
+        fetch('http://localhost:5000/reviews', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newReview)
+        })
+           .then(res => res.json())
+           .then(data => {
+                console.log(data);
+                toast.success('Your Review is Successfully Submitted!');
+            });
     }
 
     return (
-        <div>
+        <div className="mb-16">
             <h1 className="text-center text-3xl font-bold mb-16">Feel Free To Share Your Experience </h1>
-            <div className="flex">
+            <div className="flex flex-col lg:flex-row">
                 <div className="flex-1">
-                    <p className="text-2xl mb-4 font-semibold text-center">{roomTitle}</p>
+                    <p className="text-2xl mb-4 font-bold text-center">{roomTitle}</p>
                     <img src={roomImg} alt="" />
                 </div>
                 <div className="flex-1">
+                    <h1 className="text-center text-2xl font-bold mt-4">Write a Review</h1>
                     <form onSubmit={handleReview} className="card-body">
                         <div className="form-control">
                             <label className="label">
