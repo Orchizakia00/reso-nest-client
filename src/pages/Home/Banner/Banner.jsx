@@ -11,11 +11,11 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-60 rounded-xl"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div>
-                                <h1 className="text-4xl font-bold text-white">Discover Your Perfect Stay, <br /> Where Comfort Meets Luxury.</h1>
-                                <p className="text-sm font-medium mt-4 text-white">
+                                <h1 data-aos="fade-up" className="text-4xl font-bold text-white">Discover Your Perfect Stay, <br /> Where Comfort Meets Luxury.</h1>
+                                <p data-aos="fade-up" className="text-sm font-medium mt-4 text-white">
                                     Book Now, Experience Hospitality Like Never Before, Memorable Getaways Await.
                                 </p>
-                                <button className="btn btn-accent normal-case mt-5 border-none">Book Us</button>
+                                <button data-aos="fade-up" className="btn btn-accent normal-case mt-5 border-none">Book Us</button>
                             </div>
                         </div>
                     </div>

@@ -7,7 +7,7 @@ const Room = ({ room }) => {
     const { title, img, _id } = room;
 
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div data-aos="fade-up" className="card card-compact w-96 bg-base-100 shadow-xl">
             <figure><img src={img} alt={title} className="w-[400px] h-[200px]" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>

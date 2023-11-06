@@ -1,13 +1,21 @@
 import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Room from "./Room";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Rooms = () => {
 
     const roomsData = useLoaderData();
 
     const [rooms, setRooms] = useState(roomsData);
+    // const [currentPage, setCurrentPage] = useState(0);
+    // const [itemsPerPage, setItemsPerPage] = useState(10);
+
+    // useEffect(() => {
+    //     fetch(`http://localhost:5000/rooms?page=${currentPage}&size=${itemsPerPage}`)
+    //         .then(res => res.json())
+    //         .then(data => setRooms(data))
+    // }, [currentPage, itemsPerPage])
 
     const handleSortByPriceLtH = () => {
         const sortedRooms = [...rooms].sort((a, b) => a.price - b.price);
@@ -17,6 +25,29 @@ const Rooms = () => {
         const sortedRooms = [...rooms].sort((a, b) => b.price - a.price);
         setRooms(sortedRooms);
     };
+
+    // pagination
+    // const numberOfPages = Math.ceil(rooms.length / itemsPerPage);
+
+    // const pages = [...Array(numberOfPages).keys()];
+
+    // const handleItemsPerPage = e => {
+    //     const val = parseInt(e.target.value);
+    //     setItemsPerPage(val);
+    //     setCurrentPage(0);
+    // }
+
+    // const handlePrev = () => {
+    //     if (currentPage > 0) {
+    //         setCurrentPage(currentPage - 1);
+    //     }
+    // }
+    // const handleNext = () => {
+    //     if (currentPage < pages.length - 1) {
+    //         setCurrentPage(currentPage + 1);
+    //     }
+    // }
+
 
     return (
         <div className="mb-16">
@@ -44,6 +75,28 @@ const Rooms = () => {
                     rooms.map(room => <Room key={room._id} room={room}></Room>)
                 }
             </div>
+
+            {/* pagination */}
+            {/* <div className="mt-10 text-center">
+                <p className="mb-4">Current Page: {currentPage} </p>
+                <button onClick={handlePrev} className="btn btn-base normal-case">Prev</button>
+                {
+                    pages.map(page => (
+                        <button
+                            onClick={() => setCurrentPage(page)}
+                            key={page}
+                            className={currentPage == page ? 'btn-accent btn mx-2' : 'btn btn-base mx-2'} >
+                            {page}
+                        </button>
+                    ))
+                }
+                <button onClick={handleNext} className="btn btn-base normal-case">Next</button>
+                <select value={itemsPerPage} onChange={handleItemsPerPage} name="" id="">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </div> */}
         </div>
     );
 };
