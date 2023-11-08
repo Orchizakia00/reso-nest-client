@@ -16,7 +16,7 @@ const Faq = () => {
             </div>
             <div className="collapse collapse-arrow bg-base-200 w-3/4 mx-auto">
                 <div className="collapse collapse-arrow border border-base-300">
-                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                         What services does ResoNest provide?
                     </div>

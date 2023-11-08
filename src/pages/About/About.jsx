@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
 
 const About = () => {
     return (
@@ -27,21 +28,6 @@ const About = () => {
             </div>
 
             <div className="mb-16">
-                {/* <h1 className="mb-5 text-4xl text-center font-bold">Why Choose Us</h1> */}
-
-                {/* <div className="flex w-3/5 mx-auto">
-                    <div className="text-left flex-1">
-                        <li>Our portfolio showcases successful partnerships with a diverse range of hotels, from boutique establishments to luxury resorts.</li>
-                        
-                        <li>The hospitality industry is ever-evolving. We stay ahead of the curve, embracing innovation and adapting to emerging trends to keep your hotel competitive.</li>
-                        
-                    
-                        <li>Our passionate and skilled team is committed to your hotels success. We work tirelessly to exceed your expectations and deliver outstanding results.</li>
-                        
-                        <li>We understand that each hotel is unique. That is why we customize our services to meet the specific needs and goals of your property.</li>
-                        
-                    </div>
-                </div> */}
 
                 <div className="flex gap-8 mb-16 bg-base-200 pr-6">
                     <div className="flex-1">
@@ -55,6 +41,85 @@ const About = () => {
                     </div>
                 </div>
 
+            </div>
+
+            <div>
+                <h1 className="text-center text-4xl font-bold mb-16">Meet Our Team</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
+
+                    <div className='text-center w-[314px] space-y-3'>
+                        <img className='h-[200px] rounded-xl' src="https://i.ibb.co/YbZrGb9/leadership-concept-ai-generated-image-268835-5687.jpg" alt="" />
+                        <p className='font-bold text-2xl'>Robert Anderson</p>
+                        <p>General Manager</p>
+                        <div className='flex gap-4 justify-center'>
+                            <FaFacebook />
+                            <FaInstagram />
+                            <FaLinkedin />
+                            <FaTwitter></FaTwitter>
+                        </div>
+                    </div>
+
+                    <div className='text-center w-[314px] space-y-3'>
+                        <img className='h-[200px] rounded-xl' src="https://i.ibb.co/bz3S3mH/confident-businesswoman-serious-businessman-office-generated-by-ai-188544-26828.jpg" alt="" />
+                        <p className='font-bold text-2xl'>Sarah Johnson</p>
+                        <p>Front Desk Manager</p>
+                        <div className='flex gap-4 justify-center'>
+                            <FaFacebook />
+                            <FaInstagram />
+                            <FaLinkedin />
+                            <FaTwitter></FaTwitter>
+                        </div>
+                    </div>
+
+                    <div className='text-center w-[314px] space-y-3'>
+                        <img className='h-[200px] rounded-xl' src="https://i.ibb.co/mGh8HCq/confident-businesswoman-standing-luxury-office-smiling-toothy-smile-generated-by-ai-188544-61328.jpg" alt="" />
+                        <p className='font-bold text-2xl'>Sophia Martin</p>
+                        <p>Guest Services Manager</p>
+                        <div className='flex gap-4 justify-center'>
+                            <FaFacebook />
+                            <FaInstagram />
+                            <FaLinkedin />
+                            <FaTwitter></FaTwitter>
+                        </div>
+                    </div>
+
+                    <div className='text-center w-[314px] space-y-3'>
+                        <img className='h-[200px] rounded-xl' src="https://i.ibb.co/cQQVRTz/close-up-businessman-smiling-23-2150771099.jpg" alt="" />
+                        <p className='font-bold text-2xl'>Benjamin Carter</p>
+                        <p>Sales and Marketing Manager</p>
+                        <div className='flex gap-4 justify-center'>
+                            <FaFacebook />
+                            <FaInstagram />
+                            <FaLinkedin />
+                            <FaTwitter></FaTwitter>
+                        </div>
+                    </div>
+
+                    <div className='text-center w-[314px] space-y-3'>
+                        <img className='h-[200px] rounded-xl' src="https://i.ibb.co/xj8G2Kk/confident-elegant-businessman-holds-champagne-flute-party-generated-by-artificial-intellingence-2503.jpg" alt="" />
+                        <p className='font-bold text-2xl'>Mia Walker</p>
+                        <p>Food and Beverage Manager</p>
+                        <div className='flex gap-4 justify-center'>
+                            <FaFacebook />
+                            <FaInstagram />
+                            <FaLinkedin />
+                            <FaTwitter></FaTwitter>
+                        </div>
+                    </div>
+
+                    <div className='text-center w-[314px] space-y-3'>
+                        <img className='h-[200px] rounded-xl' src="https://i.ibb.co/VVCTsWr/confident-businesswoman-suit-elegance-beauty-generated-by-ai-24640-81238.jpg" alt="" />
+                        <p className='font-bold text-2xl'>Chloe Foster</p>
+                        <p>Human Resources Manager</p>
+                        <div className='flex gap-4 justify-center'>
+                            <FaFacebook />
+                            <FaInstagram />
+                            <FaLinkedin />
+                            <FaTwitter></FaTwitter>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </div>

@@ -6,7 +6,10 @@ const Footer = () => {
         <>
             <NavLink to={'/'}><a className="link link-hover">Home</a></NavLink>
             <NavLink to={'/rooms'}><a className="link link-hover">Rooms</a></NavLink>
+            <NavLink to={'/about'}><a className="link link-hover">About Us</a></NavLink>
             <NavLink to={'/bookings'}><a className="link link-hover">My Bookings</a></NavLink>
+            <NavLink to={'/faq'}><a className="link link-hover">FAQ</a></NavLink>
+            <NavLink to={'/contact'}><a className="link link-hover">Contact Us</a></NavLink>
         </>
 
     return (
