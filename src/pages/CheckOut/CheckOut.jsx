@@ -53,6 +53,18 @@ const CheckOut = () => {
                 toast.success('Your Booking is Successful!');
             });
 
+        // Update room availability after successful booking
+        fetch(`http://localhost:5000/rooms/${_id}/updateAvailability`, {
+            method: 'PUT', // or 'PATCH' depending on your backend setup
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data); // Handle the response from the update request if necessary
+            });
+
     }
 
 
