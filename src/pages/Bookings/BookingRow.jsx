@@ -33,7 +33,7 @@ const BookingRow = ({ booking, handleDelete }) => {
                 <Link to={`/updateBooking/${_id}`}>
                     <button className="btn btn-circle btn-outline normal-case mr-2 ">Edit</button>
                 </Link>
-                <button onClick={() => handleDelete(_id)} className="btn btn-circle btn-outline normal-case">Delete</button>
+                <button onClick={() => handleDelete(_id, date)} className="btn btn-circle btn-outline normal-case">Delete</button>
             </td>
             <td>
                 <Link to={`/review/${_id}`}>

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
 import useAuth from "../../hooks/useAuth";
 import BookingRow from "./BookingRow";
+import moment from "moment/moment";
 
 const Bookings = () => {
 
@@ -18,55 +19,68 @@ const Bookings = () => {
             .then(data => setBookings(data))
     }, [url])
 
-    const handleDelete = (id) => {
-        toast.custom((t) => (
-            <div
-                className={`${t.visible ? 'animate-enter' : 'animate-leave'
-                    } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
-            >
-                <div className="flex-1 w-0 p-4">
-                    <div className="flex items-start">
-                        <div className="ml-3 flex-1">
-                            <p className="mt-1 text-sm text-gray-500">
-                                Are you sure you want to delete?
-                            </p>
+    const handleDelete = (id, bookingDate) => {
+
+        const currentDate = moment();
+        const bookingDateObject = moment(bookingDate);
+        const twoDaysFromNow = moment(currentDate).add(3, 'days');
+
+
+        if (bookingDateObject.isBefore(twoDaysFromNow, 'day')) {
+            // If the booking date is within 2 days from the current date
+            toast.error('Bookings can only be deleted before 2 days of the booking date.');
+        }
+        else {
+            toast.custom((t) => (
+                <div
+                    className={`${t.visible ? 'animate-enter' : 'animate-leave'
+                        } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+                >
+                    <div className="flex-1 w-0 p-4">
+                        <div className="flex items-start">
+                            <div className="ml-3 flex-1">
+                                <p className="mt-1 text-sm text-gray-500">
+                                    Are you sure you want to delete?
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="flex border-l border-gray-200">
-                    <button
-                        onClick={() => {
-                            toast.dismiss(t.id);
-                            // Handle deletion logic here
-                            fetch(`http://localhost:5000/bookings/${id}`, {
-                                method: 'DELETE',
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                }
-                            })
-                                .then(res => res.json())
-                                .then(data => {
-                                    console.log(data);
-                                    if (data.deletedCount > 0) {
-                                        toast.success('Your booking has been deleted successfully');
-                                        const remaining = bookings.filter(booking => booking._id !== id);
-                                        setBookings(remaining);
+                    <div className="flex border-l border-gray-200">
+                        <button
+                            onClick={() => {
+                                toast.dismiss(t.id);
+                                // Handle deletion logic here
+                                fetch(`http://localhost:5000/bookings/${id}`, {
+                                    method: 'DELETE',
+                                    headers: {
+                                        'Content-Type': 'application/json'
                                     }
                                 })
-                        }}
-                        className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                    >
-                        Yes
-                    </button>
-                    <button
-                        onClick={() => toast.dismiss(t.id)}
-                        className="w-full border border-transparent rounded-none p-4 flex items-center justify-center text-sm font-medium text-gray-600 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
-                    >
-                        Cancel
-                    </button>
+                                    .then(res => res.json())
+                                    .then(data => {
+                                        console.log(data);
+                                        if (data.deletedCount > 0) {
+                                            toast.success('Your booking has been deleted successfully');
+                                            const remaining = bookings.filter(booking => booking._id !== id);
+                                            setBookings(remaining);
+                                        }
+                                    })
+                            }}
+                            className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        >
+                            Yes
+                        </button>
+                        <button
+                            onClick={() => toast.dismiss(t.id)}
+                            className="w-full border border-transparent rounded-none p-4 flex items-center justify-center text-sm font-medium text-gray-600 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                        >
+                            Cancel
+                        </button>
+                    </div>
                 </div>
-            </div>
-        ));
+            ));
+        }
+
     }
 
     return (
@@ -102,7 +116,7 @@ const Bookings = () => {
                             bookings.map(booking => (
                                 <BookingRow
                                     key={booking._id}
-                                    
+
                                     booking={booking}
                                     handleDelete={handleDelete}
                                 ></BookingRow>

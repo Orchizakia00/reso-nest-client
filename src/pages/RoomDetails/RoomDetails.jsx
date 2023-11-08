@@ -21,6 +21,8 @@ const RoomDetails = () => {
 
     const filteredReview = reviews.filter(review => review.roomId === _id);
     console.log(filteredReview);
+    const reviewCount = filteredReview.length;
+    console.log('count', reviewCount);
 
     return (
         <div>
@@ -41,7 +43,9 @@ const RoomDetails = () => {
                     <p> <span className="font-bold">Special Offer: </span>
                         {special_offer !== null ? special_offer : "No special offer available"}
                     </p>
-                    <p> <span className="font-bold">Reviews: </span> {filteredReview < 0 ? filteredReview.length : 'No Reviews'}</p>
+                    {/* <p> <span className="font-bold">Reviews: </span> {filteredReview < 0 ? reviewCount : 'No Reviews'}</p> */}
+                    <p> <span className="font-bold">Reviews: </span> {filteredReview.length === 0 ? 'No Reviews' : reviewCount}</p>
+
                     <div className="card-actions justify-end">
                         <Link to={`/checkout/${_id}`}><button className="btn btn-accent">Book Now</button></Link>
                     </div>
