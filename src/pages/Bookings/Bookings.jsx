@@ -11,6 +11,7 @@ const Bookings = () => {
     const [bookings, setBookings] = useState([]);
 
 
+
     const url = `http://localhost:5000/bookings?email=${user.email}`;
 
     useEffect(() => {
@@ -19,7 +20,23 @@ const Bookings = () => {
             .then(data => setBookings(data))
     }, [url])
 
-    const handleDelete = (id, bookingDate) => {
+    if (bookings.length < 1) {
+        return <>
+            <div>
+                <div className="hero h-[50vh] rounded-xl" style={{ backgroundImage: 'url(https://i.ibb.co/HHT6Rhq/beautiful-umbrella-chair-around-swimming-pool-hotel-resort-1203-11776.jpg)' }}>
+                    <div className="hero-overlay bg-opacity-60 rounded-xl"></div>
+                    <div className="hero-content text-center text-neutral-content">
+                        <div className="max-w-md">
+                            <h1 className="mb-5 text-4xl font-bold">Your Bookings</h1>
+                        </div>
+                    </div>
+                </div>
+                <p className="text-center my-24">No Bookings Found!</p>
+            </div>
+        </>
+    }
+
+    const handleDelete = (id, bookingDate, bookingRoomId) => {
 
         const currentDate = moment();
         const bookingDateObject = moment(bookingDate);
@@ -59,10 +76,30 @@ const Bookings = () => {
                                     .then(res => res.json())
                                     .then(data => {
                                         console.log(data);
+                                        // if (data.deletedCount > 0) {
+                                        //     toast.success('Your booking has been deleted successfully');
+                                        //     const remaining = bookings.filter(booking => booking._id !== id);
+                                        //     setBookings(remaining);
+                                        // }
+
                                         if (data.deletedCount > 0) {
+
                                             toast.success('Your booking has been deleted successfully');
                                             const remaining = bookings.filter(booking => booking._id !== id);
                                             setBookings(remaining);
+
+                                            // Update room availability to true
+                                            fetch(`http://localhost:5000/rooms/${bookingRoomId}/updateAvailabilityToTrue`, {
+                                                method: 'PUT',
+                                                headers: {
+                                                    'Content-Type': 'application/json'
+                                                }
+                                            })
+                                                .then(res => res.json())
+                                                .then(data => {
+                                                    console.log(data);
+                                                });
+
                                         }
                                     })
                             }}
@@ -116,7 +153,6 @@ const Bookings = () => {
                             bookings.map(booking => (
                                 <BookingRow
                                     key={booking._id}
-
                                     booking={booking}
                                     handleDelete={handleDelete}
                                 ></BookingRow>

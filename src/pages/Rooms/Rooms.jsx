@@ -8,7 +8,11 @@ const Rooms = () => {
     const roomsData = useLoaderData();
 
     const [rooms, setRooms] = useState(roomsData);
-    const [availableRooms, setAvailableRooms] = useState(rooms.length);
+
+    const initialAvailableRooms = rooms.filter(room => room.availability === true);
+    // console.log(initialAvailableRooms);
+
+    const [availableRooms, setAvailableRooms] = useState(initialAvailableRooms.length);
 
     const handleSortByPriceLtH = () => {
         const sortedRooms = [...rooms].sort((a, b) => a.price - b.price);
@@ -18,6 +22,8 @@ const Rooms = () => {
         const sortedRooms = [...rooms].sort((a, b) => b.price - a.price);
         setRooms(sortedRooms);
     };
+
+
 
 
     useEffect(() => {
@@ -38,8 +44,6 @@ const Rooms = () => {
                 }
             })
     }, [rooms])
-
-
 
 
     return (

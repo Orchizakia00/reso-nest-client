@@ -1,10 +1,26 @@
 /* eslint-disable react/prop-types */
 
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const BookingRow = ({ booking, handleDelete }) => {
+    // const [roomId, setRoomId] = useState([]);
 
-    const { roomImg, _id, phone, email, customerName, date, duration } = booking;
+    useEffect(() => {
+        fetch('http://localhost:5000/rooms')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+
+    }, []);
+
+    
+
+
+    const { roomImg, _id, phone, email, customerName, date, duration, roomId } = booking;
+
+    const bookingRoomId = roomId;
 
     return (
         <tr>
@@ -33,7 +49,7 @@ const BookingRow = ({ booking, handleDelete }) => {
                 <Link to={`/updateBooking/${_id}`}>
                     <button className="btn btn-circle btn-outline normal-case mr-2 ">Edit</button>
                 </Link>
-                <button onClick={() => handleDelete(_id, date)} className="btn btn-circle btn-outline normal-case">Delete</button>
+                <button onClick={() => handleDelete(_id, date, bookingRoomId)} className="btn btn-circle btn-outline normal-case">Delete</button>
             </td>
             <td>
                 <Link to={`/review/${_id}`}>
