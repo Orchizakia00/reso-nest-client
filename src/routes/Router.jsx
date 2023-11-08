@@ -11,6 +11,9 @@ import CheckOut from "../pages/CheckOut/CheckOut";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import UpdateBooking from "../pages/UpdateBooking/UpdateBooking";
 import Review from "../pages/Review/Review";
+import About from "../pages/About/About";
+import Faq from "../pages/Faq/Faq";
+import ContactUs from "../pages/ContactUs/ContactUs";
 
 
 const router = createBrowserRouter([
@@ -60,6 +63,18 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/about",
+        element: <About></About>
+      },
+      {
+        path: "/faq",
+        element: <Faq></Faq>
+      },
+      {
+        path: "/contact",
+        element: <ContactUs></ContactUs>
       },
     ]
   },

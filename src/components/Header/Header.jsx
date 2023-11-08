@@ -22,7 +22,10 @@ const Header = () => {
         <>
             <NavLink to={'/'}><li><a>Home</a></li></NavLink>
             <NavLink to={'/rooms'}><li><a>Rooms</a></li></NavLink>
+            <NavLink to={'/about'}><li><a>About Us</a></li></NavLink>
             <NavLink to={'/bookings'}><li><a>My Bookings</a></li></NavLink>
+            <NavLink to={'/faq'}><li><a>FAQ</a></li></NavLink>
+            <NavLink to={'/contact'}><li><a>Contact Us</a></li></NavLink>
             {
                 user? (
                     <>

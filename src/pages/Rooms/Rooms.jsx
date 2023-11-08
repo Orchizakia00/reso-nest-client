@@ -48,10 +48,6 @@ const Rooms = () => {
     //     }
     // }
 
-    // // available rooms
-    // const availableRooms = rooms.filter(room => room.availability === true);
-    // console.log(availableRooms);
-
 
     return (
         <div className="mb-16">
@@ -66,15 +62,12 @@ const Rooms = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between items-center mb-8">
-                <div className="dropdown dropdown-bottom">
-                    <label tabIndex={0} className="btn m-1 normal-case">Filter By Price</label>
-                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a onClick={handleSortByPriceLtH}>Low to High</a></li>
-                        <li><a onClick={handleSortByPriceHtL}>High to Low</a></li>
-                    </ul>
-                </div>
-                
+            <div className="dropdown dropdown-bottom mb-8">
+                <label tabIndex={0} className="btn m-1 normal-case">Filter By Price</label>
+                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a onClick={handleSortByPriceLtH}>Low to High</a></li>
+                    <li><a onClick={handleSortByPriceHtL}>High to Low</a></li>
+                </ul>
             </div>
             {/* <h1 className="text-center text-4xl font-bold my-10">Our Rooms</h1> */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
