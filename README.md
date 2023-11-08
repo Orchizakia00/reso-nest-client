@@ -1,8 +1,13 @@
-# React + Vite
+# Reso Nest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Client-side Live Link: https://reso-nest.web.app/
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features:
+- User can view the available rooms and see detailed information about the rooms.
+- User can also view if there is any review available for the specific room given by any customer. 
+- User can also book any available room by submitting some informations about them and the date when they want to book the room.
+- After booking user can update and delete their bookings. But they can only delete 2 days before their booking. 
+-  After deleting user's booking the room will be availablefor other customer again.
+- User can view testimonials of the hotel. 
+- In about section, user can know about the history and mission of the hotel.
+- They can also meet the team members of the hotel.
