@@ -27,7 +27,7 @@ const Review = () => {
         }
         console.log(newReview);
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://reso-nest-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -40,7 +40,7 @@ const CheckOut = () => {
         }
         console.log(order);
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://reso-nest-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ const CheckOut = () => {
             });
 
         // Update room availability 
-        fetch(`http://localhost:5000/rooms/${_id}/updateAvailability`, {
+        fetch(`https://reso-nest-server.vercel.app/rooms/${_id}/updateAvailability`, {
             method: 'PUT', 
             headers: {
                 'Content-Type': 'application/json'

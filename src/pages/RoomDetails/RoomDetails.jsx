@@ -11,7 +11,7 @@ const RoomDetails = () => {
     console.log(_id);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://reso-nest-server.vercel.app/reviews')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

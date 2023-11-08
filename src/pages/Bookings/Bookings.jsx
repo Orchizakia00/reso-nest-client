@@ -12,7 +12,7 @@ const Bookings = () => {
 
 
 
-    const url = `http://localhost:5000/bookings?email=${user.email}`;
+    const url = `https://reso-nest-server.vercel.app/bookings?email=${user.email}`;
 
     useEffect(() => {
         fetch(url)
@@ -67,7 +67,7 @@ const Bookings = () => {
                             onClick={() => {
                                 toast.dismiss(t.id);
                                 // Handle deletion logic here
-                                fetch(`http://localhost:5000/bookings/${id}`, {
+                                fetch(`https://reso-nest-server.vercel.app/bookings/${id}`, {
                                     method: 'DELETE',
                                     headers: {
                                         'Content-Type': 'application/json'
@@ -89,7 +89,7 @@ const Bookings = () => {
                                             setBookings(remaining);
 
                                             // Update room availability to true
-                                            fetch(`http://localhost:5000/rooms/${bookingRoomId}/updateAvailabilityToTrue`, {
+                                            fetch(`https://reso-nest-server.vercel.app/rooms/${bookingRoomId}/updateAvailabilityToTrue`, {
                                                 method: 'PUT',
                                                 headers: {
                                                     'Content-Type': 'application/json'

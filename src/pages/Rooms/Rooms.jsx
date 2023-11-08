@@ -27,7 +27,7 @@ const Rooms = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/bookings')
+        fetch('https://reso-nest-server.vercel.app/bookings')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

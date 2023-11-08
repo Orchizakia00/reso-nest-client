@@ -7,7 +7,7 @@ const BookingRow = ({ booking, handleDelete }) => {
     // const [roomId, setRoomId] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/rooms')
+        fetch('https://reso-nest-server.vercel.app/rooms')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

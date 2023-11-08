@@ -25,32 +25,32 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/rooms')
+        loader: () => fetch('https://reso-nest-server.vercel.app/rooms')
       },
       {
         path: "/rooms",
         element: <Rooms></Rooms>,
-        loader: () => fetch('http://localhost:5000/rooms')
+        loader: () => fetch('https://reso-nest-server.vercel.app/rooms')
       },
       {
         path: "/roomDetails/:id",
         element: <PrivateRoute><RoomDetails></RoomDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
+        loader: ({ params }) => fetch(`https://reso-nest-server.vercel.app/rooms/${params.id}`)
       },
       {
         path: "/checkout/:id",
         element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
+        loader: ({ params }) => fetch(`https://reso-nest-server.vercel.app/rooms/${params.id}`)
       },
       {
         path: "/updateBooking/:id",
         element: <PrivateRoute><UpdateBooking></UpdateBooking></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/bookings/${params.id}`)
+        loader: ({ params }) => fetch(`https://reso-nest-server.vercel.app/bookings/${params.id}`)
       },
       {
         path: "/review/:id",
         element: <PrivateRoute><Review></Review></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/bookings/${params.id}`)
+        loader: ({ params }) => fetch(`https://reso-nest-server.vercel.app/bookings/${params.id}`)
       },
       {
         path: "/bookings",

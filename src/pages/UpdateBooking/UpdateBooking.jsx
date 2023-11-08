@@ -30,7 +30,7 @@ const UpdateBooking = () => {
         }
         console.log(updatedOrder);
 
-        fetch(`http://localhost:5000/bookings/${_id}`, {
+        fetch(`https://reso-nest-server.vercel.app/bookings/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
