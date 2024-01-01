@@ -1,8 +1,7 @@
+import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import toast from "react-hot-toast";
-import axios from "axios";
 
 const Login = () => {
 
@@ -22,17 +21,7 @@ const Login = () => {
                 console.log(result.user);
 
                 toast.success('Logged In Successfully!');
-                const user = { email };
-
-                // get token
-                axios.post('https://reso-nest-server.vercel.app/jwt', user,
-                    { withCredentials: true })
-                    .then(res => {
-                        console.log(res.data);
-                        if (res.data.success) {
-                            navigate('/');
-                        }
-                    })
+                navigate('/');
             })
             .catch(error => {
                 console.log(error);
@@ -44,15 +33,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-
-                axios.post('https://reso-nest-server.vercel.app/jwt', user,
-                    { withCredentials: true })
-                    .then(res => {
-                        console.log(res.data);
-                        if (res.data.success) {
-                            navigate('/');
-                        }
-                    })
+                navigate('/');
             })
             .catch(error => {
                 console.error(error);
