@@ -47,7 +47,7 @@ const Rooms = () => {
 
 
     return (
-        <div className="mb-16">
+        <div className="mb-16 w-full px-5 mx-auto">
             <Helmet>
                 <title>ResoNest | Rooms</title>
             </Helmet>

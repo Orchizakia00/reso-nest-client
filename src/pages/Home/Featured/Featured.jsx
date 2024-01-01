@@ -9,9 +9,9 @@ const Featured = ({ rooms }) => {
 
 
     return (
-        <div className="mb-16">
+        <div className="my-16 w-full px-5 mx-auto">
             <h1 className="text-center text-4xl font-bold mb-16">Featured Rooms</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-5 lg:gap-10">
                 {
                     rooms.filter(room => room.room_no >= 101 && room.room_no <= 106)
                         .map(room => <Room key={room._id} room={room}></Room>)

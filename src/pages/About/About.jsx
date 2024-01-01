@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6"
 
 const About = () => {
     return (
-        <div>
+        <div className="px-5">
             <Helmet>
                 <title>ResoNest | About Us</title>
             </Helmet>
@@ -17,7 +17,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="flex gap-8 mb-16">
+            <div className="flex flex-col lg:flex-row px-5 gap-8 my-16">
                 <div className="flex flex-col flex-1 items-center justify-center">
                     <h2 className="mb-5 text-3xl text-left font-bold">Our Mission</h2>
                     <p>At ResoNest, our mission is to redefine hospitality management by fostering unforgettable guest experiences, driving operational excellence, and maximizing profitability for our clients. We are dedicated to creating a harmonious balance between exceptional service, sustainable practices, and financial success, ensuring that every hotel under our management thrives and stands out in the competitive hospitality landscape.</p>
@@ -27,9 +27,9 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="mb-16">
+            <div className="my-16">
 
-                <div className="flex gap-8 mb-16 bg-base-200 pr-6">
+                <div className="flex gap-8 mb-16 bg-base-200 pr-6 flex-col-reverse lg:flex-row p-5">
                     <div className="flex-1">
                         <img className="w-full" src="https://i.ibb.co/6PDCbNj/rendering-building-with-word-top-it-878402-2656.jpg" alt="hotel management services" />
                     </div>
@@ -44,8 +44,8 @@ const About = () => {
             </div>
 
             <div>
-                <h1 className="text-center text-4xl font-bold mb-16">Meet Our Team</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
+                <h1 className="text-center text-4xl font-bold my-16">Meet Our Team</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-10 justify-center w-full px-16">
 
                     <div className='text-center w-[314px] space-y-3'>
                         <img className='h-[200px] rounded-xl' src="https://i.ibb.co/YbZrGb9/leadership-concept-ai-generated-image-268835-5687.jpg" alt="" />

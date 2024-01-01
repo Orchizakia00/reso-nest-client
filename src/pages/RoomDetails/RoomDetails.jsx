@@ -26,7 +26,7 @@ const RoomDetails = () => {
 
     return (
         <div>
-            <div className="card lg:card-side bg-base-100 shadow-xl my-10">
+            <div className="card lg:card-side bg-base-100 shadow-xl my-10 px-5">
                 <figure><img src={img} alt="Album" className="h-full" /></figure>
                 <div className="card-body">
                     <h2 className="card-title font-bold text-3xl">{title}</h2>
@@ -57,7 +57,7 @@ const RoomDetails = () => {
                 {filteredReview.length === 0 ? (
                     <p className="text-center text-2xl">No reviews available for this room.</p>
                 ) : (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center px-5">
                         {
                             filteredReview.map(review => <ReviewCard key={review._id} review={review}></ReviewCard>)
                         }

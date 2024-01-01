@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const Faq = () => {
     return (
-        <div className="mb-16">
+        <div className="mb-16 px-5">
             <Helmet>
                 <title>ResoNest | FAQ</title>
             </Helmet>

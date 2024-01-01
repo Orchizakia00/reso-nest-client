@@ -121,7 +121,7 @@ const Bookings = () => {
     }
 
     return (
-        <div>
+        <div className=" px-5">
             <Helmet>
                 <title>ResoNest | My Bookings</title>
             </Helmet>

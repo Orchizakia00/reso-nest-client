@@ -1,16 +1,16 @@
 
 const Testimonials = () => {
     return (
-        <div className="mb-16">
+        <div className="my-16 px-3 w-full">
             <h1 className="text-center text-4xl font-bold mb-16">Testimonials</h1>
             <div>
-                <div className="carousel w-full">
+                <div className="carousel w-full mx-auto">
                     <div id="item1" className="carousel-item w-full">
-                        <div className="flex flex-col lg:flex-row">
-                            <div className="flex-1">
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex-1 items-center justify-center">
                                 <img src="https:i.ibb.co/2YDzJkn/woman-looking-orange-tablet-1157-2103.jpg" alt="" className="rounded-xl" />
                             </div>
-                            <div className="flex-1 p-12 items-center flex">
+                            <div className="flex-1 items-center px-10 flex">
                                 <div>
                                     <p className="text-lg font-serif">My stay at ResoNest was exceptional. The staff was warm and attentive, the rooms were luxurious, and the dining experience was exquisite. A perfect blend of comfort and class.</p>
                                     <p className="text-center mt-4 font-mono">-- Sarah</p>
@@ -19,8 +19,8 @@ const Testimonials = () => {
                         </div>
                     </div>
                     <div id="item2" className="carousel-item w-full">
-                        <div className="flex flex-col lg:flex-row">
-                            <div className="flex-1">
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex-1 items-center justify-center">
                                 <img src="https://i.ibb.co/5vQs0JV/happy-woman-her-husband-standing-reception-desk-while-checking-hotel-637285-7448.jpg" alt="" className="rounded-xl" />
                             </div>
                             <div className="flex-1 p-12 items-center flex">
@@ -32,8 +32,8 @@ const Testimonials = () => {
                         </div>
                     </div>
                     <div id="item3" className="carousel-item w-full">
-                        <div className="flex flex-col lg:flex-row">
-                            <div className="flex-1">
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex-1 items-center justify-center">
                                 <img src="https://i.ibb.co/gzdyv4V/medium-shot-man-holding-smartphone-23-2149963943.jpg" alt="" className="rounded-xl" />
                             </div>
                             <div className="flex-1 p-12 items-center flex">
@@ -45,7 +45,7 @@ const Testimonials = () => {
                         </div>
                     </div>
                     <div id="item4" className="carousel-item w-full">
-                        <div className="flex flex-col lg:flex-row">
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
                             <div className="flex-1">
                                 <img src="https://i.ibb.co/0QrgKgV/happy-couple-making-order-cafe-while-waiter-is-showing-them-menu-digital-table-637285-529.jpg" alt="" className="rounded-xl" />
                             </div>
