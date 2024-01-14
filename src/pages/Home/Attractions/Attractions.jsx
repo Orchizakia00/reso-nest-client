@@ -11,7 +11,7 @@ const Attractions = () => {
         <section className="py-16">
             <h1 className="text-center text-4xl font-bold mb-10">Our Attractions</h1>
             <div className="container mx-auto text-center my-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-5 lg:px-0 mx-auto w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 md:px-0 mx-auto w-full">
                     {attractions.map((attraction, index) => (
                         <div key={index} className="card card-compact w-96 bg-base-100 shadow-xl rounded-xl">
                             <figure><img src={attraction.image} alt={attraction.name} /></figure>

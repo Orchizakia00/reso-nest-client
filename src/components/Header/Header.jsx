@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 const Header = () => {
 
-    
+
     const { user, logOut } = useAuth();
     console.log(user);
 
@@ -26,15 +26,15 @@ const Header = () => {
             <NavLink to={'/bookings'}><li><a>My Bookings</a></li></NavLink>
             <NavLink to={'/faq'}><li><a>FAQ</a></li></NavLink>
             <NavLink to={'/contact'}><li><a>Contact Us</a></li></NavLink>
-            {
-                user? (
+            {/* {
+                user ? (
                     <>
                         <button onClick={handleLogout}><li><a>Logout</a></li></button>
                     </>
                 ) : (
                     <NavLink to={'/login'}><li><a>Login</a></li></NavLink>
                 )
-            }
+            } */}
         </>
 
     return (<>
@@ -52,10 +52,35 @@ const Header = () => {
                     <FaBuilding></FaBuilding>
                     ResoNest</a></Link>
             </div>
-            <div className="navbar-end hidden lg:flex">
+            <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {navLinks}
                 </ul>
+            </div>
+            <div className="navbar-end">
+                {
+                    user ? <>
+                        <div className="dropdown dropdown-end">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                                </div>
+                            </div>
+                            <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                                <li className="mb-2">
+                                    <a className="justify-between">
+                                        {user.displayName}
+                                    </a>
+                                </li>
+                                <hr />
+                                <li onClick={handleLogout}><a>Logout</a></li>
+                            </ul>
+                        </div>
+                    </>
+
+                        :
+                        <Link to={'/login'}><button className="btn btn-ghost normal-case">Login</button></Link>
+                }
             </div>
         </div>
     </>
