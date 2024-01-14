@@ -44,12 +44,12 @@ const Review = () => {
     return (
         <div className="mb-16">
             <h1 className="text-center text-3xl font-bold mb-16">Feel Free To Share Your Experience </h1>
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col gap-3 lg:flex-row items-center">
                 <div className="flex-1">
-                    <p className="text-2xl mb-4 font-bold text-center">{roomTitle}</p>
-                    <img src={roomImg} alt="" />
+                    <img src={roomImg} alt="" className="rounded-xl mt-4 px-3" />
+                    <p className="text-2xl my-4 font-bold text-center">{roomTitle}</p>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 w-full">
                     <h1 className="text-center text-2xl font-bold mt-4">Write a Review</h1>
                     <form onSubmit={handleReview} className="card-body">
                         <div className="form-control">

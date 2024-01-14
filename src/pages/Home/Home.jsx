@@ -6,6 +6,7 @@ import Community from "./Community/Community";
 import Featured from "./Featured/Featured";
 import { useLoaderData } from "react-router-dom";
 import Amenities from "./Amenities/Amenities";
+import Attractions from "./Attractions/Attractions";
 
 const Home = () => {
 
@@ -20,8 +21,9 @@ const Home = () => {
             <Discount></Discount>
             <Featured rooms= {rooms}></Featured>
             <Testimonials></Testimonials>
-            <Community></Community>
             <Amenities></Amenities>
+            <Community></Community>
+            <Attractions></Attractions>
         </div>
     );
 };
