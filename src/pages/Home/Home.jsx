@@ -7,6 +7,7 @@ import Featured from "./Featured/Featured";
 import { useLoaderData } from "react-router-dom";
 import Amenities from "./Amenities/Amenities";
 import Attractions from "./Attractions/Attractions";
+import Membership from "./Membership/Membership";
 
 const Home = () => {
 
@@ -24,6 +25,7 @@ const Home = () => {
             <Amenities></Amenities>
             <Community></Community>
             <Attractions></Attractions>
+            <Membership></Membership>
         </div>
     );
 };
